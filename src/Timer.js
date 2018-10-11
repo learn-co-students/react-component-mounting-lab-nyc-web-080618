@@ -9,7 +9,7 @@ class Timer extends Component {
 
   // add your code here
  componentDidMount(){
-   this.intetval=setInterval(this.clockTick, 1000)
+   this.interval=setInterval(this.clockTick, 1000)
  }
 
 
@@ -43,6 +43,7 @@ class Timer extends Component {
 
   stopClock = () => {
     clearInterval(this.interval)
+    this.setState({className: "hidden"})
   }
 
   // for the 'x' button,
